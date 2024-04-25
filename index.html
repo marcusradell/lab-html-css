@@ -4,61 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lab-html-css</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: white;
-        margin: 0;
-        padding: 0;
-        color: black;
-      }
-
-      .topnav-links {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-      }
-
-      .topnav-link-item {
-        float: left;
-      }
-
-      .topnav-right-link-item {
-        float: right;
-      }
-
-      .topnav-link {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      .topnav-link:hover {
-        background-color: #111;
-      }
-
-      .brand {
-        background-color: #cc6600;
-      }
-
-      .site-footer {
-        background: #333;
-        color: white;
-        padding: 1rem;
-        margin-top: auto;
-      }
-
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background-image: url("background.jpg");
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -78,8 +24,9 @@
           </li>
         </ul>
       </nav>
-      <main></main>
+      <main id="content"></main>
       <footer class="site-footer">&copy; Copyright 2024, Sol Rådell</footer>
     </div>
+    <script src="scripts.js"></script>
   </body>
 </html>
