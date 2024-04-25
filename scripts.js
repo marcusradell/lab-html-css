@@ -5,12 +5,12 @@ const main = () => {
 
     if (hash === "#drawings") {
       content.innerHTML = `
-      <h1>Drawings</h1>
+      <h1 class="page-title">Drawings</h1>
       <img class="drawing" src="drawing1.png">
       `;
     } else if (hash === "#wishlist") {
       content.innerHTML = `
-      <h1>Wishlist</h1>
+      <h1 class="page-title">Wishlist</h1>
       <ul>
         <li>Armbandsur</li>
         <li>Ballerinaskor eller tofflor</li>
@@ -18,8 +18,13 @@ const main = () => {
         <li>Sandaler</li>
       </ul>
       `;
+    } else if (hash === "#" || !hash) {
+      content.innerHTML = `
+        <h1 class="page-title">Home</h1>
+        <p>Welcome to my page!</p>
+        `;
     } else {
-      content.innerHTML = "";
+      content.innerHTML = `<h1 class="page-title">404 - Page Not Found</h1>`;
     }
   }, 50);
 };
