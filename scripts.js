@@ -30,14 +30,14 @@ const main = () => {
             <h2 class="wishlist-item-title">Summer shoes</h2>
             <div class="wishlist-item-body">
                 <img class="wishlist-item-image" src="summer-shoes.jpg" alt="Summer shoes">
-                <p>Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.</p>
+                <p class="wishlist-item-description">Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.</p>
             </div>
         </li>
         <li class="wishlist-item">
             <h2  class="wishlist-item-title">Sandals</h2>
             <div class="wishlist-item-body">
                 <img class="wishlist-item-image" src="sandals.webp" alt="Sandals">
-                <p>This is a nice-to-have.</p>
+                <p class="wishlist-item-description">This is a nice-to-have.</p>
             </div>
         </li>
       </ul>
