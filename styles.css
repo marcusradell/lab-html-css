@@ -1,10 +1,9 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: white;
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
 }
 
 .wrapper {
@@ -53,8 +52,15 @@ body {
   text-align: end;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 800px;
+}
+
 .drawing {
   width: 100%;
   height: auto;
   max-width: 200px;
+  box-shadow: 5px 5px 5px black;
 }
