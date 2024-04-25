@@ -27,8 +27,11 @@ const main = () => {
             </div>
         </li>
         <li class="wishlist-item">
-            <h2>Summer shoes</h2>
-            <p>Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.</p>
+            <h2 class="wishlist-item-title">Summer shoes</h2>
+            <div class="wishlist-item-body">
+                <img class="wishlist-item-image" src="summer-shoes.jpg" alt="Summer shoes">
+                <p>Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.</p>
+            </div>
         </li>
         <li class="wishlist-item">
             <h2>Sandals</h2>
