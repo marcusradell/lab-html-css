@@ -49,27 +49,37 @@
         background: #333;
         color: white;
         padding: 1rem;
+        margin-top: auto;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url("background.jpg");
       }
     </style>
   </head>
   <body>
-    <nav>
-      <ul class="topnav-links">
-        <li class="topnav-link-item">
-          <a class="topnav-link brand" href="#">Home</a>
-        </li>
-        <li class="topnav-link-item">
-          <a class="topnav-link" href="#">Articles</a>
-        </li>
-        <li class="topnav-link-item">
-          <a class="topnav-link" href="#">Videos</a>
-        </li>
-        <li class="topnav-right-link-item">
-          <a class="topnav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <main>TODO: main</main>
-    <footer class="site-footer">&copy; Copyright 2024, Marcus Rådell</footer>
+    <div class="wrapper">
+      <nav>
+        <ul class="topnav-links">
+          <li class="topnav-link-item">
+            <a class="topnav-link brand" href="#">Home</a>
+          </li>
+          <li class="topnav-link-item">
+            <a class="topnav-link" href="#wishlist">Wishlist</a>
+          </li>
+          <li class="topnav-link-item">
+            <a class="topnav-link" href="#drawings">Drawings</a>
+          </li>
+          <li class="topnav-right-link-item">
+            <a class="topnav-link" href="#about-me">About Me</a>
+          </li>
+        </ul>
+      </nav>
+      <main></main>
+      <footer class="site-footer">&copy; Copyright 2024, Sol Rådell</footer>
+    </div>
   </body>
 </html>
