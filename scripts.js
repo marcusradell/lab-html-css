@@ -34,8 +34,11 @@ const main = () => {
             </div>
         </li>
         <li class="wishlist-item">
-            <h2>Sandals</h2>
-            <p>This is a nice-to-have.</p>
+            <h2  class="wishlist-item-title">Sandals</h2>
+            <div class="wishlist-item-body">
+                <img class="wishlist-item-image" src="sandals.webp" alt="Sandals">
+                <p>This is a nice-to-have.</p>
+            </div>
         </li>
       </ul>
       `;
