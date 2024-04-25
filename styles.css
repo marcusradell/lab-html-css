@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
+  background: black;
 }
 
 .wrapper {
@@ -98,6 +99,7 @@ body {
   height: 150px;
   max-width: 200px;
   aspect-ratio: 1 / 1;
+  border-radius: 5px;
 }
 
 .wishlist-item-description {

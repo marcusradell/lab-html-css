@@ -20,8 +20,11 @@ const main = () => {
             </div>
         </li>
         <li class="wishlist-item">
-            <h2>Ballerina shoes</h2>
-            <p>Either ballerina shoes, or slippers.</p>
+            <h2 class="wishlist-item-title">Ballerina shoes</h2>
+            <div class="wishlist-item-body">
+                <img class="wishlist-item-image" src="ballerina-shoes.jpg" alt="Ballerina shoes">
+                <p class="wishlist-item-description">Either ballerina shoes, or slippers.</p>
+            </div>
         </li>
         <li class="wishlist-item">
             <h2>Summer shoes</h2>
