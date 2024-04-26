@@ -1,7 +1,7 @@
 const drawings = [{ src: "drawing1.png" }];
 
 window.drawingsPage = () => `
-    <h1 class="page-title">Drawings</h1>
+  ${window.pageTitle("Drawings")}
     ${drawings
       .map(
         (drawing) =>
