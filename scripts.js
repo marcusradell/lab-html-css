@@ -53,14 +53,20 @@ const route = () => {
   const { hash } = window.location;
   const content = document.getElementById("content");
 
-  if (hash === "#" || !hash) {
-    content.innerHTML = welcome();
-  } else if (hash === "#wishlist") {
-    content.innerHTML = wishList(wishes);
-  } else if (hash === "#drawings") {
-    content.innerHTML = drawings();
-  } else {
-    content.innerHTML = pageNotFound();
+  content.innerHTML = getRoute(hash);
+};
+
+const getRoute = (hash) => {
+  switch (hash) {
+    case "":
+    case "#":
+      return welcome();
+    case "#wishlist":
+      return wishList(wishes);
+    case "#drawings":
+      return drawings();
+    default:
+      return pageNotFound();
   }
 };
 
