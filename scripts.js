@@ -45,9 +45,15 @@ const welcomePage = () => `
 
 const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
+const drawings = [{ src: "drawing1.png" }];
+
 const drawingsPage = () => `
     <h1 class="page-title">Drawings</h1>
-    <img class="drawing" src="drawing1.png">`;
+    ${drawings
+      .map(
+        (drawing) => `<img class="drawing" src="${drawing.src}" alt="Drawing">`
+      )
+      .join("")}`;
 
 const route = () => {
   const { hash } = window.location;
