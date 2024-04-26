@@ -9,29 +9,11 @@
     <link rel="stylesheet" href="src/drawings/styles.css" />
     <link rel="stylesheet" href="src/wishlist/styles.css" />
     <link rel="stylesheet" href="src/headings/styles.css" />
+    <link rel="stylesheet" href="src/topnav/styles.css" />
   </head>
   <body>
     <div class="wrapper">
-      <nav>
-        <ul class="topnav-links">
-          <li class="topnav-link-item">
-            <a class="topnav-link brand" href="#">Home</a>
-          </li>
-          <li class="topnav-link-item">
-            <a class="topnav-link" href="#wishlist">Wishlist</a>
-          </li>
-          <li class="topnav-link-item">
-            <a class="topnav-link" href="#drawings">Drawings</a>
-          </li>
-          <li class="topnav-right-link-item">
-            <a
-              class="topnav-link"
-              href="https://github.com/marcusradell/lab-html-css"
-              >Source Code</a
-            >
-          </li>
-        </ul>
-      </nav>
+      <nav id="router"></nav>
       <main id="content" class="container"></main>
       <footer class="site-footer">&copy; Copyright 2024, Sol Rådell</footer>
     </div>
@@ -40,6 +22,7 @@
     <script src="src/wishlist/index.js"></script>
     <script src="src/drawings/index.js"></script>
     <script src="src/not-found/index.js"></script>
+    <script src="src/topnav/index.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

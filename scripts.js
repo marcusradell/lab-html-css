@@ -1,7 +1,10 @@
 const route = () => {
   const { hash } = window.location;
-  const content = document.getElementById("content");
 
+  const routerElement = document.getElementById("router");
+  routerElement.innerHTML = window.router(hash);
+
+  const content = document.getElementById("content");
   content.innerHTML = getRoute(hash);
 };
 
