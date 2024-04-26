@@ -31,7 +31,7 @@ const wishlistItem = (title, image, description) => `
     </div>
 </li>`;
 
-const wishList = (wishes) => `
+const wishListPage = (wishes) => `
     <h1 class="page-title">Wishlist</h1>
     <ul class="wishlist">
     ${wishes
@@ -39,13 +39,13 @@ const wishList = (wishes) => `
       .join("")}
     </ul>`;
 
-const welcome = () => `
+const welcomePage = () => `
     <h1 class="page-title">Home</h1>
     <p>Welcome to my page!</p>`;
 
-const pageNotFound = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
+const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
-const drawings = () => `
+const drawingsPage = () => `
     <h1 class="page-title">Drawings</h1>
     <img class="drawing" src="drawing1.png">`;
 
@@ -60,13 +60,13 @@ const getRoute = (hash) => {
   switch (hash) {
     case "":
     case "#":
-      return welcome();
+      return welcomePage();
     case "#wishlist":
-      return wishList(wishes);
+      return wishListPage(wishes);
     case "#drawings":
-      return drawings();
+      return drawingsPage();
     default:
-      return pageNotFound();
+      return NotFoundPage();
   }
 };
 
