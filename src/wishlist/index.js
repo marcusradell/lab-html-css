@@ -1,4 +1,5 @@
 import { wishes } from "./wishes.js";
+import { pageTitle } from "../headings/index.js";
 
 const wishlistItem = ({ title, image, description, kid }) => `
   <li class="wishlist-item">
@@ -11,7 +12,7 @@ const wishlistItem = ({ title, image, description, kid }) => `
 </li>`;
 
 export const wishListPage = () => `
-  ${window.pageTitle("Wishlist")}
+  ${pageTitle("Wishlist")}
     <ul class="wishlist">
     ${wishes.map((wish) => wishlistItem(wish)).join("")}
     </ul>`;

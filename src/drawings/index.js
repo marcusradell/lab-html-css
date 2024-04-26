@@ -1,7 +1,9 @@
+import { pageTitle } from "../headings/index.js";
+
 const drawings = [{ src: "drawing1.png" }];
 
-window.drawingsPage = () => `
-  ${window.pageTitle("Drawings")}
+export const drawingsPage = () => `
+  ${pageTitle("Drawings")}
     ${drawings
       .map(
         (drawing) =>

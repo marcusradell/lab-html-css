@@ -15,7 +15,7 @@ const listItem = (name, href, alignRight, hash) => `
     href === hash || (href === "#" && hash === "") ? "topnav-link-active" : ""
   }" href="${href}">${name}</a></li>`;
 
-window.router = (hash) => `
+export const router = (hash) => `
     <ul class="topnav-links">
       ${links
         .map((link) => listItem(link.name, link.href, link.alignRight, hash))

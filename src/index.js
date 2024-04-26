@@ -1,10 +1,14 @@
 import { wishListPage } from "./wishlist/index.js";
+import { drawingsPage } from "./drawings/index.js";
+import { welcomePage } from "./welcome/index.js";
+import { notFoundPage } from "./not-found/index.js";
+import { router } from "./topnav/index.js";
 
 const route = () => {
   const { hash } = window.location;
 
   const routerElement = document.getElementById("router");
-  routerElement.innerHTML = window.router(hash);
+  routerElement.innerHTML = router(hash);
 
   const content = document.getElementById("content");
   content.innerHTML = getRoute(hash);
@@ -14,13 +18,13 @@ const getRoute = (hash) => {
   switch (hash) {
     case "":
     case "#":
-      return window.welcomePage();
+      return welcomePage();
     case "#wishlist":
       return wishListPage();
     case "#drawings":
-      return window.drawingsPage();
+      return drawingsPage();
     default:
-      return window.notFoundPage();
+      return notFoundPage();
   }
 };
 
