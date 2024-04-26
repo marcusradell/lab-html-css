@@ -1,3 +1,3 @@
 window.welcomePage = () => `
-<h1 class="page-title">Home</h1>
+${window.pageTitle("Home")}
 <p>Welcome to my page!</p>`;
