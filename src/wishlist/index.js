@@ -32,7 +32,7 @@ const wishlistItem = (title, image, description) => `
 </li>`;
 
 window.wishListPage = () => `
-    <h1 class="page-title">Wishlist</h1>
+  ${window.pageTitle("Wishlist")}
     <ul class="wishlist">
     ${wishes
       .map((wish) => wishlistItem(wish.title, wish.image, wish.description))
