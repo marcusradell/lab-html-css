@@ -1,7 +1,3 @@
-const welcomePage = () => `
-    <h1 class="page-title">Home</h1>
-    <p>Welcome to my page!</p>`;
-
 const drawings = [{ src: "drawing1.png" }];
 
 const drawingsPage = () => `
@@ -25,7 +21,7 @@ const getRoute = (hash) => {
   switch (hash) {
     case "":
     case "#":
-      return welcomePage();
+      return window.welcomePage();
     case "#wishlist":
       return window.wishListPage();
     case "#drawings":
