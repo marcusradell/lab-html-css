@@ -3,12 +3,12 @@ import { pageTitle } from "../headings/index.js";
 
 const wishlistItem = ({ title, image, description, kid }) => `
   <li class="wishlist-item">
-    <img class="wishlist-item-image" src="src/wishlist/${image}" alt="${title}">
+    <img class="wishlist-item-image" src="src/wishlist/images/${image}" alt="${title}">
     <div class="wishlist-item-body">
       <h2 class="wishlist-item-title">${title}</h2>  
       <p class="wishlist-item-description">${description}</p>
     </div>
-    <img class="wishlist-item-image" src="src/wishlist/${kid.toLowerCase()}.png" alt="Wishlist icon">
+    <img class="wishlist-item-image" src="src/wishlist/images/${kid.toLowerCase()}.png" alt="Wishlist icon">
 </li>`;
 
 export const wishListPage = () => `
