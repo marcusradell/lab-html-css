@@ -12,38 +12,6 @@ body {
   min-height: 100vh;
 }
 
-.topnav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #30292d;
-}
-
-.topnav-link-item {
-  float: left;
-}
-
-.topnav-right-link-item {
-  float: right;
-}
-
-.topnav-link {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.topnav-link:hover {
-  background-color: #111;
-}
-
-.brand {
-  background: rgb(107, 12, 59);
-}
-
 .site-footer {
   background: #30292d;
   color: white;
