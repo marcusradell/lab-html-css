@@ -1,4 +1,4 @@
-import { wishes } from "/src/wishlist/wishes.js";
+import { wishes } from "./wishes.js";
 
 const wishlistItem = ({ title, image, description, kid }) => `
   <li class="wishlist-item">

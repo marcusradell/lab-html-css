@@ -1,4 +1,4 @@
-import { wishListPage } from "/src/wishlist/index.js";
+import { wishListPage } from "./wishlist/index.js";
 
 const route = () => {
   const { hash } = window.location;
