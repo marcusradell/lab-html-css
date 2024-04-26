@@ -51,7 +51,7 @@ const wishlistItem = ({ title, image, description, kid }) => `
       <h2 class="wishlist-item-title">${title}</h2>  
       <p class="wishlist-item-description">${description}</p>
     </div>
-    <img class="wishlist-item-image" src="src/wishlist/${kid}.png" alt="Wishlist icon">
+    <img class="wishlist-item-image" src="src/wishlist/${kid.toLowerCase()}.png" alt="Wishlist icon">
 </li>`;
 
 window.wishListPage = () => `
