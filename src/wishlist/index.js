@@ -44,19 +44,18 @@ const wishes = [
   },
 ];
 
-const wishlistItem = (title, image, description) => `
+const wishlistItem = ({ title, image, description, kid }) => `
   <li class="wishlist-item">
-    <h2 class="wishlist-item-title">${title}</h2>
+    <img class="wishlist-item-image" src="src/wishlist/${image}" alt="${title}">
     <div class="wishlist-item-body">
-      <img class="wishlist-item-image" src="src/wishlist/${image}" alt="${title}">
+      <h2 class="wishlist-item-title">${title}</h2>  
       <p class="wishlist-item-description">${description}</p>
     </div>
+    <img class="wishlist-item-image" src="src/wishlist/${kid}.png" alt="Wishlist icon">
 </li>`;
 
 window.wishListPage = () => `
   ${window.pageTitle("Wishlist")}
     <ul class="wishlist">
-    ${wishes
-      .map((wish) => wishlistItem(wish.title, wish.image, wish.description))
-      .join("")}
+    ${wishes.map((wish) => wishlistItem(wish)).join("")}
     </ul>`;
