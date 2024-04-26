@@ -37,8 +37,11 @@ const wishList = (wishes) => `
     ${wishes
       .map((wish) => wishlistItem(wish.title, wish.image, wish.description))
       .join("")}
-    </ul>
-`;
+    </ul>`;
+
+const welcome = () => `
+    <h1 class="page-title">Home</h1>
+    <p>Welcome to my page!</p>`;
 
 const pageNotFound = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
@@ -55,10 +58,7 @@ const main = () => {
     } else if (hash === "#wishlist") {
       content.innerHTML = wishList(wishes);
     } else if (hash === "#" || !hash) {
-      content.innerHTML = `
-        <h1 class="page-title">Home</h1>
-        <p>Welcome to my page!</p>
-        `;
+      content.innerHTML = welcome();
     } else {
       content.innerHTML = pageNotFound();
     }
