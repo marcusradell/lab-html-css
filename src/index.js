@@ -2,13 +2,13 @@ import { wishListPage } from "./wishlist/index.js";
 import { drawingsPage } from "./drawings/index.js";
 import { welcomePage } from "./welcome/index.js";
 import { notFoundPage } from "./not-found/index.js";
-import { router } from "./topnav/index.js";
+import { topNav } from "./top-nav/index.js";
 
 const route = () => {
   const { hash } = window.location;
 
-  const routerElement = document.getElementById("router");
-  routerElement.innerHTML = router(hash);
+  const routerElement = document.getElementById("top-nav");
+  routerElement.innerHTML = topNav(hash);
 
   const content = document.getElementById("content");
   content.innerHTML = getRoute(hash);
