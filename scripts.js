@@ -1,3 +1,5 @@
+import { wishListPage } from "/src/wishlist/index.js";
+
 const route = () => {
   const { hash } = window.location;
 
@@ -14,7 +16,7 @@ const getRoute = (hash) => {
     case "#":
       return window.welcomePage();
     case "#wishlist":
-      return window.wishListPage();
+      return wishListPage();
     case "#drawings":
       return window.drawingsPage();
     default:
