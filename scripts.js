@@ -40,6 +40,8 @@ const wishList = (wishes) => `
     </ul>
 `;
 
+const pageNotFound = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
+
 const main = () => {
   setInterval(() => {
     const { hash } = window.location;
@@ -58,7 +60,7 @@ const main = () => {
         <p>Welcome to my page!</p>
         `;
     } else {
-      content.innerHTML = `<h1 class="page-title">404 - Page Not Found</h1>`;
+      content.innerHTML = pageNotFound();
     }
   }, 50);
 };
