@@ -1,5 +1,3 @@
-const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
-
 const route = () => {
   const { hash } = window.location;
   const content = document.getElementById("content");
@@ -17,7 +15,7 @@ const getRoute = (hash) => {
     case "#drawings":
       return window.drawingsPage();
     default:
-      return NotFoundPage();
+      return window.notFoundPage();
   }
 };
 
