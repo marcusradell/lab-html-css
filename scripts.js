@@ -49,8 +49,28 @@ const drawings = () => `
     <h1 class="page-title">Drawings</h1>
     <img class="drawing" src="drawing1.png">`;
 
+(() => {
+  let oldPushState = history.pushState;
+  history.pushState = function pushState() {
+    let ret = oldPushState.apply(this, arguments);
+    window.dispatchEvent(new Event("locationchange"));
+    return ret;
+  };
+
+  let oldReplaceState = history.replaceState;
+  history.replaceState = function replaceState() {
+    let ret = oldReplaceState.apply(this, arguments);
+    window.dispatchEvent(new Event("locationchange"));
+    return ret;
+  };
+
+  window.addEventListener("popstate", () => {
+    window.dispatchEvent(new Event("locationchange"));
+  });
+})();
+
 const main = () => {
-  setInterval(() => {
+  window.addEventListener("locationchange", function () {
     const { hash } = window.location;
     const content = document.getElementById("content");
 
@@ -63,7 +83,7 @@ const main = () => {
     } else {
       content.innerHTML = pageNotFound();
     }
-  }, 50);
+  });
 };
 
 main();
