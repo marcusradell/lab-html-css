@@ -1,13 +1,3 @@
-const drawings = [{ src: "drawing1.png" }];
-
-const drawingsPage = () => `
-    <h1 class="page-title">Drawings</h1>
-    ${drawings
-      .map(
-        (drawing) => `<img class="drawing" src="${drawing.src}" alt="Drawing">`
-      )
-      .join("")}`;
-
 const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
 const route = () => {
@@ -25,7 +15,7 @@ const getRoute = (hash) => {
     case "#wishlist":
       return window.wishListPage();
     case "#drawings":
-      return drawingsPage();
+      return window.drawingsPage();
     default:
       return NotFoundPage();
   }
