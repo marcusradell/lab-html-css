@@ -1,3 +1,7 @@
+const welcomePage = () => `
+    <h1 class="page-title">Home</h1>
+    <p>Welcome to my page!</p>`;
+
 const wishes = [
   {
     title: "Wristwatch",
@@ -39,12 +43,6 @@ const wishListPage = (wishes) => `
       .join("")}
     </ul>`;
 
-const welcomePage = () => `
-    <h1 class="page-title">Home</h1>
-    <p>Welcome to my page!</p>`;
-
-const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
-
 const drawings = [{ src: "drawing1.png" }];
 
 const drawingsPage = () => `
@@ -54,6 +52,8 @@ const drawingsPage = () => `
         (drawing) => `<img class="drawing" src="${drawing.src}" alt="Drawing">`
       )
       .join("")}`;
+
+const NotFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
 const route = () => {
   const { hash } = window.location;
