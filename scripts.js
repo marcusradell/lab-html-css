@@ -53,12 +53,12 @@ const route = () => {
   const { hash } = window.location;
   const content = document.getElementById("content");
 
-  if (hash === "#drawings") {
-    content.innerHTML = drawings();
+  if (hash === "#" || !hash) {
+    content.innerHTML = welcome();
   } else if (hash === "#wishlist") {
     content.innerHTML = wishList(wishes);
-  } else if (hash === "#" || !hash) {
-    content.innerHTML = welcome();
+  } else if (hash === "#drawings") {
+    content.innerHTML = drawings();
   } else {
     content.innerHTML = pageNotFound();
   }
