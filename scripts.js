@@ -1,3 +1,45 @@
+const wishes = [
+  {
+    title: "Wristwatch",
+    image: "wristwatch.jpg",
+    description: "The wristwatch she got from before doesn't work anymore.",
+  },
+  {
+    title: "Ballerina shoes",
+    image: "ballerina-shoes.jpg",
+    description: "Either ballerina shoes, or slippers.",
+  },
+  {
+    title: "Summer shoes",
+    image: "summer-shoes.jpg",
+    description:
+      "Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.",
+  },
+  {
+    title: "Sandals",
+    image: "sandals.webp",
+    description: "This is a nice-to-have.",
+  },
+];
+
+const wishlistItem = (title, image, description) => `
+  <li class="wishlist-item">
+    <h2 class="wishlist-item-title">${title}</h2>
+    <div class="wishlist-item-body">
+      <img class="wishlist-item-image" src="${image}" alt="${title}">
+      <p class="wishlist-item-description">${description}</p>
+    </div>
+</li>`;
+
+const wishList = (wishes) => `
+    <h1 class="page-title">Wishlist</h1>
+    <ul class="wishlist">
+    ${wishes
+      .map((wish) => wishlistItem(wish.title, wish.image, wish.description))
+      .join("")}
+    </ul>
+`;
+
 const main = () => {
   setInterval(() => {
     const { hash } = window.location;
@@ -9,39 +51,7 @@ const main = () => {
       <img class="drawing" src="drawing1.png">
       `;
     } else if (hash === "#wishlist") {
-      content.innerHTML = `
-      <h1 class="page-title">Wishlist</h1>
-      <ul class="wishlist">
-        <li class="wishlist-item">
-            <h2 class="wishlist-item-title">Wristwatch</h2>
-            <div class="wishlist-item-body">
-                <img class="wishlist-item-image" src="wristwatch.jpg" alt="Wristwatch">
-                <p class="wishlist-item-description">The wristwatch she got from before doesn't work anymore.</p>
-            </div>
-        </li>
-        <li class="wishlist-item">
-            <h2 class="wishlist-item-title">Ballerina shoes</h2>
-            <div class="wishlist-item-body">
-                <img class="wishlist-item-image" src="ballerina-shoes.jpg" alt="Ballerina shoes">
-                <p class="wishlist-item-description">Either ballerina shoes, or slippers.</p>
-            </div>
-        </li>
-        <li class="wishlist-item">
-            <h2 class="wishlist-item-title">Summer shoes</h2>
-            <div class="wishlist-item-body">
-                <img class="wishlist-item-image" src="summer-shoes.jpg" alt="Summer shoes">
-                <p class="wishlist-item-description">Maybe dad or mom will buy her these anyhow, so she might not need to wish for them.</p>
-            </div>
-        </li>
-        <li class="wishlist-item">
-            <h2  class="wishlist-item-title">Sandals</h2>
-            <div class="wishlist-item-body">
-                <img class="wishlist-item-image" src="sandals.webp" alt="Sandals">
-                <p class="wishlist-item-description">This is a nice-to-have.</p>
-            </div>
-        </li>
-      </ul>
-      `;
+      content.innerHTML = wishList(wishes);
     } else if (hash === "#" || !hash) {
       content.innerHTML = `
         <h1 class="page-title">Home</h1>
