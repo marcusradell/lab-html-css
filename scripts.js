@@ -45,16 +45,17 @@ const welcome = () => `
 
 const pageNotFound = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
 
+const drawings = () => `
+    <h1 class="page-title">Drawings</h1>
+    <img class="drawing" src="drawing1.png">`;
+
 const main = () => {
   setInterval(() => {
     const { hash } = window.location;
     const content = document.getElementById("content");
 
     if (hash === "#drawings") {
-      content.innerHTML = `
-      <h1 class="page-title">Drawings</h1>
-      <img class="drawing" src="drawing1.png">
-      `;
+      content.innerHTML = drawings();
     } else if (hash === "#wishlist") {
       content.innerHTML = wishList(wishes);
     } else if (hash === "#" || !hash) {
