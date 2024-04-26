@@ -1,3 +1,8 @@
+@import url("./drawings/styles.css");
+@import url("./headings/styles.css");
+@import url("./topnav/styles.css");
+@import url("./wishlist/styles.css");
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
