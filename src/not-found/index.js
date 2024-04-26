@@ -1,1 +1,1 @@
-window.notFoundPage = () => `<h1 class="page-title">404 - Page Not Found</h1>`;
+window.notFoundPage = () => window.pageTitle("404 - Page Not Found");
