@@ -49,41 +49,45 @@ const drawings = () => `
     <h1 class="page-title">Drawings</h1>
     <img class="drawing" src="drawing1.png">`;
 
-(() => {
-  let oldPushState = history.pushState;
-  history.pushState = function pushState() {
-    let ret = oldPushState.apply(this, arguments);
-    window.dispatchEvent(new Event("locationchange"));
-    return ret;
-  };
+const route = () => {
+  const { hash } = window.location;
+  const content = document.getElementById("content");
 
-  let oldReplaceState = history.replaceState;
-  history.replaceState = function replaceState() {
-    let ret = oldReplaceState.apply(this, arguments);
-    window.dispatchEvent(new Event("locationchange"));
-    return ret;
-  };
-
-  window.addEventListener("popstate", () => {
-    window.dispatchEvent(new Event("locationchange"));
-  });
-})();
+  if (hash === "#drawings") {
+    content.innerHTML = drawings();
+  } else if (hash === "#wishlist") {
+    content.innerHTML = wishList(wishes);
+  } else if (hash === "#" || !hash) {
+    content.innerHTML = welcome();
+  } else {
+    content.innerHTML = pageNotFound();
+  }
+};
 
 const main = () => {
-  window.addEventListener("locationchange", function () {
-    const { hash } = window.location;
-    const content = document.getElementById("content");
+  (() => {
+    let oldPushState = history.pushState;
+    history.pushState = function pushState() {
+      let ret = oldPushState.apply(this, arguments);
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
 
-    if (hash === "#drawings") {
-      content.innerHTML = drawings();
-    } else if (hash === "#wishlist") {
-      content.innerHTML = wishList(wishes);
-    } else if (hash === "#" || !hash) {
-      content.innerHTML = welcome();
-    } else {
-      content.innerHTML = pageNotFound();
-    }
-  });
+    let oldReplaceState = history.replaceState;
+    history.replaceState = function replaceState() {
+      let ret = oldReplaceState.apply(this, arguments);
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
+
+    window.addEventListener("popstate", () => {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+  })();
+
+  route();
+
+  window.addEventListener("locationchange", route);
 };
 
 main();
